@@ -1,2 +1,1 @@
-# docker-images
-Various Docker images
+# Various Docker images
