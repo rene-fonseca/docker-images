@@ -26,17 +26,18 @@ RUN cd /tmp/binutils-2.33.1 \
 
 
 # Build GCC
-RUN curl -OL 'ftp://ftp.mirrorservice.org/sites/sourceware.org/pub/gcc/releases/gcc-9.2.0/gcc-9.2.0.tar.xz'
-RUN tar -xf gcc-9.2.0.tar.xz
+# TAG: internal compiler error during build
+#RUN curl -OL 'ftp://ftp.mirrorservice.org/sites/sourceware.org/pub/gcc/releases/gcc-9.2.0/gcc-9.2.0.tar.xz'
+#RUN tar -xf gcc-9.2.0.tar.xz
 
-#RUN curl -OL 'ftp://ftp.mirrorservice.org/sites/sourceware.org/pub/gcc/releases/gcc-8.3.0/gcc-8.3.0.tar.xz'
-#RUN tar -xf gcc-8.3.0.tar.xz
+RUN curl -OL 'ftp://ftp.mirrorservice.org/sites/sourceware.org/pub/gcc/releases/gcc-8.3.0/gcc-8.3.0.tar.xz'
+RUN tar -xf gcc-8.3.0.tar.xz
 
 #RUN curl -OL 'ftp://ftp.mirrorservice.org/sites/sourceware.org/pub/gcc/releases/gcc-7.5.0/gcc-7.5.0.tar.xz'
 #RUN tar -xf gcc-7.5.0.tar.xz
 
 # see https://gcc.gnu.org/install/configure.html
-RUN cd /tmp/gcc-9.2.0 \
+RUN cd /tmp/gcc-8.3.0 \
   && mkdir -p build \
   && cd build \
   && ../configure \
