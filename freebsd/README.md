@@ -21,7 +21,7 @@ cmake --build . --target install
 
 ## Azure DevOps Pipeline
 
-Azure DevOps job snippet:
+Job snippet using *cmake*:
 
 ```
 resources:
