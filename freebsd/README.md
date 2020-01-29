@@ -15,7 +15,7 @@ If you use *cmake* you can build your project with a command like below:
 ```
 mkir build
 cd build
-cmake .. -DCMAKE_INSTALL_PREFIX=install -DCMAKE_CXX_COMPILER=/freebsd/bin/x86_64-pc-freebsd12-g++ -DCMAKE_C_COMPILER=/freebsd/bin/x86_64-pc-freebsd12-gcc
+cmake .. -DCMAKE_CXX_COMPILER=/freebsd/bin/x86_64-pc-freebsd12-g++ -DCMAKE_C_COMPILER=/freebsd/bin/x86_64-pc-freebsd12-gcc
 cmake --build . --target install
 ```
 
