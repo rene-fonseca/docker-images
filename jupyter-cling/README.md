@@ -11,7 +11,11 @@ docker pull renefonseca/jupyter-cling:latest
 ## Usage
 
 Start Jupyter:
+```shell
 docker run -it -e JUPYTER_ENABLE_LAB=1 --rm -p 8888:8888 jupyter-cling:latest
+```
 
 Start shell:
+```shell
 docker run -it --rm -p 8888:8888 jupyter-cling:latest start.sh bash
+```
