@@ -19,7 +19,19 @@ RUN mkdir /base && \
 
 FROM jupyter/minimal-notebook
 
-# TAG: add labels
+ARG BUILD_DATE
+ARG VCS_REF
+ARG VERSION
+
+LABEL org.label-schema.build-date=$BUILD_DATE \
+      org.label-schema.name="Jupyter xeus/cling" \
+      org.label-schema.description="Jupyter with xeus/cling and BASE framework" \
+      org.label-schema.url="https://github.com/rene-fonseca/docker-images" \
+      org.label-schema.vcs-ref=$VCS_REF \
+      org.label-schema.vcs-url="https://github.com/rene-fonseca/docker-images" \
+      org.label-schema.vendor="René Fonseca" \
+      org.label-schema.version=$VERSION \
+      org.label-schema.schema-version="1.0"
 
 USER root
 
